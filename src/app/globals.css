@@ -1,26 +1,124 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
+@theme {
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  @keyframes wiggle {
+    0%,
+    100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+  --animate-fade-in-100: fade-in 0.1s ease-in-out;
+  --animate-fade-in-500: fade-in 0.5s ease-in-out;
+  --animate-fade-in-1000: fade-in 1s ease-in-out;
+  --animate-fade-in-1500: fade-in 1.5s ease-in-out;
+  --animate-fade-in-2000: fade-in 2s ease-in-out;
+  @keyframes fade-in {
+    0% {
+      opacity: 0%;
+    },
+    50% {
+      opacity: 50%;
+    }
+    100% {
+      opacity: 100%;
+    }
+  }
+
+  --animate-fade-in-up: fade-in-up 1s ease-in-out;
+
+@keyframes fade-in-up {
+  0% {
+    opacity: 0%;
+    transform: translateY(20px);
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+--animate-fade-in-down: fade-in-down 1s ease-in-out;
+@keyframes fade-in-down {
+  0% {
+    opacity: 0%;
+    transform: translateY(-20px);
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateY(0);
+  }
+}
+  --animate-fade-in-left-100: fade-in-left 0.1s ease-in;
+  --animate-fade-in-left-500: fade-in-left 0.5s ease-in;
+  --animate-fade-in-left-1000: fade-in-left 1s ease-in;
+  --animate-fade-in-left-1500: fade-in-left 1.5s ease-in;
+  --animate-fade-in-left-2000: fade-in-left 2s ease-in;
+@keyframes fade-in-left {
+  0% {
+    opacity: 0%;
+    transform: translateX(-20px);
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+  --animate-fade-in-right-100: fade-in-right 0.1s ease-in;
+  --animate-fade-in-right-500: fade-in-right 0.5s ease-in 1s;
+  --animate-fade-in-right-1000: fade-in-right 1s ease-in;
+  --animate-fade-in-right-1500: fade-in-right 1.5s ease-in;
+  --animate-fade-in-right-2000: fade-in-right 2s ease-in;
+  --animate-fade-in-right-3000: fade-in-right 3s ease-in;
+@keyframes fade-in-right {
+  0% {
+    opacity: 0%;
+    transform: translateX(20px);
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 100%;
+    transform: translateX(0);
+  }
+}
+--animate-fade-out: fade-out 1s ease-in-out;
+@keyframes fade-out {
+  0% {
+    opacity: 100%;
+  }
+  50% {
+    opacity: 50%;
+  }
+  100% {
+    opacity: 0%;
+  }
+}
+  --animate-ticker: ticker 20s linear infinite;
+@keyframes ticker {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+
 }
+
+
