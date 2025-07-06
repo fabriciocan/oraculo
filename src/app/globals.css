@@ -1,6 +1,5 @@
 @import "tailwindcss";
 
-
 @theme {
   --animate-wiggle: wiggle 1s ease-in-out infinite;
   @keyframes wiggle {
@@ -21,7 +20,7 @@
   @keyframes fade-in {
     0% {
       opacity: 0%;
-    },
+    }
     50% {
       opacity: 50%;
     }
@@ -31,94 +30,148 @@
   }
 
   --animate-fade-in-up: fade-in-up 1s ease-in-out;
+  @keyframes fade-in-up {
+    0% {
+      opacity: 0%;
+      transform: translateY(20px);
+    }
+    50% {
+      opacity: 50%;
+    }
+    100% {
+      opacity: 100%;
+      transform: translateY(0);
+    }
+  }
 
-@keyframes fade-in-up {
-  0% {
-    opacity: 0%;
-    transform: translateY(20px);
+  --animate-fade-in-down: fade-in-down 1s ease-in-out;
+  @keyframes fade-in-down {
+    0% {
+      opacity: 0%;
+      transform: translateY(-20px);
+    }
+    50% {
+      opacity: 50%;
+    }
+    100% {
+      opacity: 100%;
+      transform: translateY(0);
+    }
   }
-  50% {
-    opacity: 50%;
-  }
-  100% {
-    opacity: 100%;
-    transform: translateY(0);
-  }
-}
---animate-fade-in-down: fade-in-down 1s ease-in-out;
-@keyframes fade-in-down {
-  0% {
-    opacity: 0%;
-    transform: translateY(-20px);
-  }
-  50% {
-    opacity: 50%;
-  }
-  100% {
-    opacity: 100%;
-    transform: translateY(0);
-  }
-}
+
   --animate-fade-in-left-100: fade-in-left 0.1s ease-in;
   --animate-fade-in-left-500: fade-in-left 0.5s ease-in;
   --animate-fade-in-left-1000: fade-in-left 1s ease-in;
   --animate-fade-in-left-1500: fade-in-left 1.5s ease-in;
   --animate-fade-in-left-2000: fade-in-left 2s ease-in;
-@keyframes fade-in-left {
-  0% {
-    opacity: 0%;
-    transform: translateX(-20px);
+  @keyframes fade-in-left {
+    0% {
+      opacity: 0%;
+      transform: translateX(-20px);
+    }
+    50% {
+      opacity: 50%;
+    }
+    100% {
+      opacity: 100%;
+      transform: translateX(0);
+    }
   }
-  50% {
-    opacity: 50%;
-  }
-  100% {
-    opacity: 100%;
-    transform: translateX(0);
-  }
-}
+
   --animate-fade-in-right-100: fade-in-right 0.1s ease-in;
   --animate-fade-in-right-500: fade-in-right 0.5s ease-in 1s;
   --animate-fade-in-right-1000: fade-in-right 1s ease-in;
   --animate-fade-in-right-1500: fade-in-right 1.5s ease-in;
   --animate-fade-in-right-2000: fade-in-right 2s ease-in;
   --animate-fade-in-right-3000: fade-in-right 3s ease-in;
-@keyframes fade-in-right {
-  0% {
-    opacity: 0%;
-    transform: translateX(20px);
+  @keyframes fade-in-right {
+    0% {
+      opacity: 0%;
+      transform: translateX(20px);
+    }
+    50% {
+      opacity: 50%;
+    }
+    100% {
+      opacity: 100%;
+      transform: translateX(0);
+    }
   }
-  50% {
-    opacity: 50%;
+
+  --animate-fade-out: fade-out 1s ease-in-out;
+  @keyframes fade-out {
+    0% {
+      opacity: 100%;
+    }
+    50% {
+      opacity: 50%;
+    }
+    100% {
+      opacity: 0%;
+    }
   }
-  100% {
-    opacity: 100%;
-    transform: translateX(0);
-  }
-}
---animate-fade-out: fade-out 1s ease-in-out;
-@keyframes fade-out {
-  0% {
-    opacity: 100%;
-  }
-  50% {
-    opacity: 50%;
-  }
-  100% {
-    opacity: 0%;
-  }
-}
+
   --animate-ticker: ticker 20s linear infinite;
-@keyframes ticker {
-  0% {
-    transform: translateX(0%);
+  @keyframes ticker {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
   }
-  100% {
-    transform: translateX(-50%);
+
+  --animate-pulse: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: .5;
+    }
   }
 }
 
-
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
 }
 
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
 
+::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #ff00d6, #54c1ff, #6605ff);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #e600c4, #2881b8, #4c2db8);
+}
+
+/* Selection color */
+::selection {
+  background: #ff00d6;
+  color: white;
+}
+
+/* Focus styles */
+button:focus,
+a:focus,
+input:focus {
+  outline: 2px solid #ff00d6;
+  outline-offset: 2px;
+}
+
+/* Improved text rendering */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
