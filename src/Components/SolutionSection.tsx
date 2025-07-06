@@ -9,7 +9,7 @@ export const SolutionSection = () => {
         {/* Header */}
         <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 mb-12 sm:mb-16">
           <div className="flex-1">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-bold animate-fade-in-1000 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-white font-bold animate-slide-in-top leading-tight">
               Não vendemos{" "}
               <span className="text-[#2881b8] relative">
                 promessas
@@ -18,7 +18,7 @@ export const SolutionSection = () => {
             </h1>
           </div>
           <div className="flex-1 flex items-end">
-            <p className="text-lg sm:text-xl text-white/80 animate-fade-in-right-1000 leading-relaxed">
+            <p className="text-lg sm:text-xl text-white/80 animate-flip-in leading-relaxed">
               Entregamos resultados reais com metodologia comprovada e transparência total.
             </p>
           </div>
@@ -32,21 +32,21 @@ export const SolutionSection = () => {
           
           {/* Cards Container */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 justify-items-center">
-            <div className="animate-fade-in-left-500">
+            <div className="animate-flip-in">
               <Card 
                 title="Criação de infraestrutura" 
                 url="/imgs/7.png" 
                 backSubtitle="Colocamos seu negócio no ar com site, CRM, SEO, redes sociais e tudo que você precisa para alavancar seu negócio"  
               />
             </div>
-            <div className="animate-fade-in-left-1000">
+            <div className="animate-flip-in" style={{ animationDelay: '0.2s' }}>
               <Card 
                 title="Campanhas e social media para captação de leads" 
                 url="/imgs/8.png" 
                 backSubtitle="Combinamos campanhas e redes sociais pra gerar interesse e atrair possíveis clientes."  
               />
             </div>
-            <div className="animate-fade-in-left-1500">
+            <div className="animate-flip-in" style={{ animationDelay: '0.4s' }}>
               <Card 
                 title="Construção do funil de vendas de ponta a ponta" 
                 url="/imgs/9.png" 
@@ -58,7 +58,7 @@ export const SolutionSection = () => {
 
         {/* Processo */}
         <div className="mt-16 sm:mt-20">
-          <h3 className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-8 sm:mb-12 text-center animate-fade-in-up">
+          <h3 className="text-2xl sm:text-3xl lg:text-4xl text-white font-bold mb-8 sm:mb-12 text-center animate-slide-in-bottom">
             Nosso processo em 4 etapas
           </h3>
           
@@ -71,7 +71,7 @@ export const SolutionSection = () => {
             ].map((step, index) => (
               <div 
                 key={index}
-                className="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700 hover:border-[#ff00d6] transition-all duration-300 hover:scale-105 animate-fade-in-up"
+                className="group relative bg-gradient-to-br from-gray-800 to-gray-900 p-6 rounded-2xl border border-gray-700 hover:border-[#ff00d6] transition-all duration-300 hover:scale-105 animate-rotate-in"
                 style={{ animationDelay: `${index * 0.2}s` }}
               >
                 <div className="text-4xl sm:text-5xl font-bold text-[#ff00d6] mb-4 group-hover:scale-110 transition-transform duration-300">

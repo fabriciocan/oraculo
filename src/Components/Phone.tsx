@@ -26,36 +26,31 @@ export const Phone = () => {
         {/* MENSAGENS */}
         <div className="m-3 flex flex-col justify-between h-full gap-3 overflow-hidden">
           <div
-            className="h-auto max-w-[85%] flex items-center justify-center p-3 bg-white rounded-2xl rounded-bl-sm text-black text-sm shadow-md"
-            style={{ animation: 'var(--animate-fade-in-left-500)', animationDelay: '0s', animationFillMode: 'both' }}
+            className="h-auto max-w-[85%] flex items-center justify-center p-3 bg-white rounded-2xl rounded-bl-sm text-black text-sm shadow-md animate-fade-in-left-500"
           >
             <p>Quero cancelar meu contrato com a Oraculo!! 😤</p>
           </div>
 
           <div
-            className="h-auto max-w-[85%] flex items-center justify-center p-3 bg-white rounded-2xl rounded-bl-sm text-black text-sm shadow-md"
-            style={{ animation: 'var(--animate-fade-in-left-500)', animationDelay: '0.5s', animationFillMode: 'both' }}
+            className="h-auto max-w-[85%] flex items-center justify-center p-3 bg-white rounded-2xl rounded-bl-sm text-black text-sm shadow-md animate-fade-in-left-1000"
           >
             <p>Não tenho estoque pra vender tanto! 😭</p>
           </div>
 
           <div
-            className="h-auto max-w-[85%] self-end p-3 bg-gradient-to-r from-green-400 to-green-500 rounded-2xl rounded-br-sm text-white text-sm shadow-md"
-            style={{ animation: 'var(--animate-fade-in-right-500)', animationDelay: '1s', animationFillMode: 'both' }}
+            className="h-auto max-w-[85%] self-end p-3 bg-gradient-to-r from-green-400 to-green-500 rounded-2xl rounded-br-sm text-white text-sm shadow-md animate-fade-in-right-1000"
           >
             <p>Calma Ana! 😅</p>
           </div>
 
           <div
-            className="h-auto max-w-[85%] self-end p-3 bg-gradient-to-r from-green-400 to-green-500 rounded-2xl rounded-br-sm text-white text-sm shadow-md"
-            style={{ animation: 'var(--animate-fade-in-right-500)', animationDelay: '1.5s', animationFillMode: 'both' }}
+            className="h-auto max-w-[85%] self-end p-3 bg-gradient-to-r from-green-400 to-green-500 rounded-2xl rounded-br-sm text-white text-sm shadow-md animate-fade-in-right-1500"
           >
             <p>Posso pausar a campanha por uns dias! 🎯</p>
           </div>
 
           <div
-            className="h-auto max-w-[85%] flex items-center justify-center p-3 bg-white rounded-2xl rounded-bl-sm text-black text-sm shadow-md"
-            style={{ animation: 'var(--animate-fade-in-left-500)', animationDelay: '2s', animationFillMode: 'both' }}
+            className="h-auto max-w-[85%] flex items-center justify-center p-3 bg-white rounded-2xl rounded-bl-sm text-black text-sm shadow-md animate-fade-in-left-2000"
           >
             <p>Vocês são demais! ❤️</p>
           </div>
@@ -63,13 +58,17 @@ export const Phone = () => {
 
         {/* BARRA INFERIOR */}
         <div className="flex items-center justify-around gap-2 bg-zinc-700 h-12 w-full rounded-b-xl px-3">
-          <img src="/imgs/smile.svg" alt="Smile" className="h-5 w-5 opacity-70 hover:opacity-100 transition-opacity cursor-pointer" />
+          <div className="h-5 w-5 bg-yellow-400 rounded-full flex items-center justify-center">
+            <span className="text-xs">😊</span>
+          </div>
           <input
             type="text"
             placeholder="Digite uma mensagem..."
             className="border border-gray-400 rounded-full h-8 flex-1 px-3 text-black text-sm focus:outline-none focus:border-[#ff00d6] transition-colors"
           />
-          <img src="/imgs/microphone.svg" alt="Mic" className="h-5 w-5 opacity-70 hover:opacity-100 transition-opacity cursor-pointer" />
+          <div className="h-5 w-5 bg-[#ff00d6] rounded-full flex items-center justify-center">
+            <span className="text-white text-xs">🎤</span>
+          </div>
         </div>
       </div>
     </div>

@@ -6,6 +6,10 @@ import TickerBar from "@/Components/TickBar";
 import { ProblemSection } from "@/Components/ProblemSection";
 import { SolutionSection } from "@/Components/SolutionSection";
 import { CTASection } from "@/Components/CTASection";
+import { TestimonialsSection } from "@/Components/TestimonialsSection";
+import { StatsSection } from "@/Components/StatsSection";
+import { FAQSection } from "@/Components/FAQSection";
+import { Footer } from "@/Components/Footer";
 
 export default function Home() {
   return (
@@ -21,7 +25,7 @@ export default function Home() {
         <div className="flex flex-col lg:flex-row items-center justify-center w-full gap-8 lg:gap-[100px] mt-4 sm:mt-10 mb-8 sm:mb-16 px-4 sm:px-8">
           {/* TEXTOS */}
           <div className="flex flex-col items-center lg:items-start justify-center text-center lg:text-left max-w-xl">
-            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4 py-2 bg-gradient-to-r from-[#ff00d6] via-[#54c1ff] to-[#6605ff] text-transparent bg-clip-text animate-fade-in-1000 leading-tight">
+            <h1 className="text-3xl sm:text-4xl lg:text-5xl font-black mb-4 py-2 bg-gradient-to-r from-[#ff00d6] via-[#54c1ff] to-[#6605ff] text-transparent bg-clip-text animate-slide-in-bottom leading-tight">
               SEU CRESCIMENTO
               <br />
               COMEÇA AGORA
@@ -32,7 +36,7 @@ export default function Home() {
             </p>
             <a
               href="#cta"
-              className="py-3 px-6 sm:px-8 bg-[#ff00d6] text-white rounded-full font-bold text-sm sm:text-base hover:scale-105 hover:bg-[#e600c4] transition-all duration-300 animate-fade-in-1000 shadow-lg hover:shadow-xl"
+              className="py-3 px-6 sm:px-8 bg-[#ff00d6] text-white rounded-full font-bold text-sm sm:text-base hover:scale-105 hover:bg-[#e600c4] transition-all duration-300 animate-bounce-in shadow-lg hover:shadow-xl"
             >
               QUERO IMPULSIONAR MEU NEGÓCIO
             </a>
@@ -45,7 +49,7 @@ export default function Home() {
 
             {/* Celular em cima do brilho */}
             <div
-              className="relative z-10 transition duration-700 ease-in-out"
+              className="relative z-10 transition duration-700 ease-in-out animate-zoom-in"
               style={{
                 transform: "perspective(1000px)",
               }}
@@ -67,14 +71,26 @@ export default function Home() {
         <TickerBar />
       </div>
 
+      {/* STATS SECTION */}
+      <StatsSection />
+
       {/* PROBLEM SECTION */}
       <ProblemSection />
 
       {/* SOLUTION SECTION */}
       <SolutionSection />
 
+      {/* TESTIMONIALS SECTION */}
+      <TestimonialsSection />
+
+      {/* FAQ SECTION */}
+      <FAQSection />
+
       {/* CTA SECTION */}
       <CTASection />
+
+      {/* FOOTER */}
+      <Footer />
     </>
   );
 }
